@@ -11,15 +11,17 @@ const Footer = () => {
         
         <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-1">
           <div className="flex items-center">
-            <div className="relative h-10 w-40 lg:h-12 lg:w-48"> 
-              <Image 
-                src="/img/branding/branding.png" 
-                alt="Besa Dienstleistungen Logo" 
-                fill
-                className="object-contain object-center lg:object-left"
-                priority
-              />
-            </div>
+            <Link href="/" scroll={false} title="Zur Startseite von Besa Dienstleistungen">
+              <div className="relative h-10 w-40 lg:h-12 lg:w-48"> 
+                <Image 
+                  src="/img/branding/branding.png" 
+                  alt="Besa Dienstleistungen Logo" 
+                  fill
+                  className="object-contain object-center lg:object-left"
+                  priority
+                />
+              </div>
+            </Link>
           </div>
           
           <span className="text-grey hidden lg:block opacity-20">|</span>

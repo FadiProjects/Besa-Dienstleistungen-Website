@@ -31,6 +31,7 @@ export default function ScrollSmootherWrapper({
     const hash = window.location.hash;
     if (hash) {
       setTimeout(() => {
+        // @ts-ignore
         smoother.scrollTo(hash, {
           duration: 1,
           ease: "power2.out",

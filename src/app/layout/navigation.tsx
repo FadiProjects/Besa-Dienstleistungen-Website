@@ -52,6 +52,7 @@ const Navbar = () => {
 
       if (smoother && id) {
         setIsOpen(false);
+         // @ts-ignore
         smoother.scrollTo(`#${id}`, {
           duration: 1,
           ease: "power2.out"
@@ -141,9 +142,16 @@ const Navbar = () => {
             ))}
 
             <div className="flex gap-8 pt-4">
-              <Image src="/img/social-media/facebook.png" alt="Facebook" width={24} height={24} />
-              <Image src="/img/social-media/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
-              <Image src="/img/social-media/instagram.png" alt="Instagram" width={24} height={24} />
+              <a href="https://www.facebook.com/profile.php?id=61581314251429&mibextid=wwXIfr&rdid=USkmFkeJ8JBdDXsR&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1RaUXSk18M%2F%3Fmibextid%3DwwXIfr#" target="_blank" rel="noopener noreferrer" aria-label="Besuchen Sie Besa Dienstleistungen Berlin auf Facebook" title="Besuchen Sie Besa Dienstleistungen Berlin auf Facebook">
+                <Image src="/img/social-media/facebook.png" alt="Facebook" width={24} height={24} />
+              </a>
+              <a href="https://wa.me/4917641693078" target="_blank" rel="noopener noreferrer" title="Kontaktieren Sie Besa Dienstleistungen Berlin auf WhatsApp">
+                <Image src="/img/social-media/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
+              </a>
+              <a href="https://www.instagram.com/besa.dienstleistungen?utm_source=qr&igsh=MTNoazVjZW9zcjVzMg==" target="_blank" rel="noopener noreferrer" aria-label="Besuchen Sie Besa Dienstleistungen Berlin auf Instagram"
+              title="Besuchen Sie Besa Dienstleistungen Berlin auf Instagram">
+                <Image src="/img/social-media/instagram.png" alt="Instagram" width={24} height={24} />
+             </a>
             </div>
           </div>
         )}
