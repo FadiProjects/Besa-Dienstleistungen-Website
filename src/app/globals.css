@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Sansation';
+  src: url('/fonts/Sansation-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-main: "Sansation", Arial, Helvetica, sans-serif;
+  --font-text: "Poppins", Arial, Helvetica, sans-serif;
+
+  --color-primary: #D2242F;
+  --color-primary-dark: #91151D;
+  --color-dark: #1F1F1F;
+  --color-grey: #F8F8F8;
+  --color-paragraph: #968E8E;
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    @apply bg-grey w-2.5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-paragraph rounded-full border-solid border-grey border-y-10 border-x-3 bg-clip-padding;
+  }
+  
+  *, ::after, ::before {
+    @apply m-0 p-0 box-border
+  }
+
+  html, body {
+    @apply max-w-full overflow-x-hidden scroll-auto;
+  }
+
+  body {
+    @apply font-text antialiased font-normal text-[16px] text-paragraph;
+  }
+
+  h1, .h1 {
+    @apply font-main leading-none text-dark font-bold text-[clamp(2.75rem,5vw+1rem,4.5rem)];;
+  }
+
+  h2, .h2 {
+    @apply font-main leading-none text-dark font-bold text-[clamp(2rem,4vw+1rem,3.5rem)];
+  }
+
+  h3, .h3 {
+    @apply font-main leading-none text-dark font-bold text-[clamp(1.75rem,3vw+1rem,3rem)];
+  }
+
+  h4, .h4 {
+    @apply font-main leading-none text-dark font-bold text-[clamp(1.5rem,2.5vw+1rem,2.25rem)];
+  }
+  h5, .h5 {
+    @apply font-main leading-none text-white font-bold text-[clamp(1.5rem,2.5vw+1rem,2.25rem)];
+  }
+
+  p,
+  label {
+    @apply text-paragraph text-[clamp(1rem,1vw+0.5rem,1.125rem)];
+  }
+
+  ul {
+    @apply list-none;
+  }
+
+  a {
+    @apply text-inherit no-underline text-[16px];
+  }
+
+  section {
+    @apply py-24;
+  }
+}
+
+@layer utilities {
+  .line-break {
+    @apply inline min-[483px]:block min-[483px]:w-full;
+  }
+
+  .reveal-item {
+    @apply opacity-0 will-change-[transform,opacity];
+  }
+}
